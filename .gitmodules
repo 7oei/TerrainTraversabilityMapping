@@ -1,3 +1,6 @@
 [submodule "Azure_Kinect_ROS_Driver"]
 	path = Azure_Kinect_ROS_Driver
 	url = https://github.com/7oei/Azure_Kinect_ROS_Driver.git
+[submodule "normal_and_roughness_estimator"]
+	path = normal_and_roughness_estimator
+	url = https://github.com/7oei/normal_and_roughness_estimator.git
