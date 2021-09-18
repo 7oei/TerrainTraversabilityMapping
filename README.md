@@ -11,6 +11,6 @@
     - normal_and_roughness_estimator : approach_2
 
 ### launch
-    ``` bash:MyBag downsample and normal estimation
-    roslaunch TerrainTraversabilityMapping normal_and_roughness.launch
-    ```
+``` bash:MyBag downsample and normal estimation
+roslaunch TerrainTraversabilityMapping normal_and_roughness.launch
+```
