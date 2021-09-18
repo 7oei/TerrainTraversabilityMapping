@@ -1,3 +1,4 @@
+#include "organized_voxel_grid_filter/organized_voxel_grid_filter.hpp"
 
 #include <ros/ros.h>
 // PCL specific includes
@@ -7,10 +8,7 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
 
-ros::Publisher pub;
-
-void
-CloudCallback (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
+void CloudCallback (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
   // Container for original & filtered data
   pcl::PCLPointCloud2* cloud = new pcl::PCLPointCloud2;
@@ -49,7 +47,7 @@ main (int argc, char** argv)
   ros::param::set("down_rate", 0.05);
 
   // Create a ROS subscriber for the input point cloud
-  ros::Subscriber sub = nh.subscribe ("points2", 1, CloudCallback);
+  sub = nh.subscribe ("points2", 1, CloudCallback);
 
   // Create a ROS publisher for the output point cloud
   pub = nh.advertise<sensor_msgs::PointCloud2> ("filtered_cloud", 1);
