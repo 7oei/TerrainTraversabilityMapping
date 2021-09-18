@@ -2,7 +2,7 @@
 Traversability is calculated from normals and roughness.
 
 ![](TerrainTraversabilityMapping/image/traversability.gif)
-![](TerrainTraversabilityMapping/image/TerrainTraversabilityMapping.png)
+
 ### submodule branches
 - approach_1
     - TerrainTraversabilityMapping : approach_1
@@ -18,6 +18,8 @@ Traversability is calculated from normals and roughness.
     ``` bash:traversability_evaluator
     roslaunch TerrainTraversabilityMapping traversability_evaluator.launch
     ```
+### Node Graph
+![](TerrainTraversabilityMapping/image/TerrainTraversabilityMapping.png)
 
 ### Dataset
 [CrossProgressDataset](https://drive.google.com/drive/folders/1R3Wtpu1K4gtzwmeaHm4RCCFxt8rx4zGU?usp=sharing)
