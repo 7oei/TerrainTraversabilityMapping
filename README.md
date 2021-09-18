@@ -1,4 +1,7 @@
 # TerrainTraversabilityMapping
+Traversability is calculated from normals and roughness.
+
+![](TerrainTraversabilityMapping/image/traversability.gif)
 
 ### submodule branches
 - approach_1
@@ -11,6 +14,10 @@
     - normal_and_roughness_estimator : approach_2
 
 ### launch
-``` bash:MyBag downsample and normal estimation
-roslaunch TerrainTraversabilityMapping normal_and_roughness.launch
-```
+- downsample and normal estimation and roughness estimation
+    ``` bash:traversability_evaluator
+    roslaunch TerrainTraversabilityMapping traversability_evaluator.launch
+    ```
+
+### Dataset
+[CrossProgressDataset](https://drive.google.com/drive/folders/1R3Wtpu1K4gtzwmeaHm4RCCFxt8rx4zGU?usp=sharing)
