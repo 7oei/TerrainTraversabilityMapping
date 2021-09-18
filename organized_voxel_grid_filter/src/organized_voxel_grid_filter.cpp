@@ -28,6 +28,9 @@ void CloudCallback (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   sor.setLeafSize (down_rate, down_rate, down_rate);
   sor.filter (cloud_filtered);
 
+  cloud_filtered.header.stamp = cloud->header.stamp;
+	cloud_filtered.header.frame_id = cloud->header.frame_id; 
+
   // Convert to ROS data type
   sensor_msgs::PointCloud2 output;
   pcl_conversions::fromPCL(cloud_filtered, output);
@@ -47,7 +50,7 @@ main (int argc, char** argv)
   ros::param::set("down_rate", 0.05);
 
   // Create a ROS subscriber for the input point cloud
-  sub = nh.subscribe ("points2", 1, CloudCallback);
+  sub = nh.subscribe ("/points2", 1, CloudCallback);
 
   // Create a ROS publisher for the output point cloud
   pub = nh.advertise<sensor_msgs::PointCloud2> ("filtered_cloud", 1);
