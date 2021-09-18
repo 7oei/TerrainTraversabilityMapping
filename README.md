@@ -2,7 +2,7 @@
 Traversability is calculated from normals and roughness.
 
 ![](TerrainTraversabilityMapping/image/traversability.gif)
-
+![](TerrainTraversabilityMapping/image/TerrainTraversabilityMapping.png)
 ### submodule branches
 - approach_1
     - TerrainTraversabilityMapping : approach_1
