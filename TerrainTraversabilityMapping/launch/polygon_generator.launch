@@ -1,0 +1,14 @@
+<!-- -
+Copyright (c) Cross Progress. All rights reserved.
+Licensed under the MIT License.
+- -->
+
+<launch>
+  <group ns="perception">
+    <node name="organized_voxel_grid_filter" pkg="organized_voxel_grid_filter" type="organized_voxel_grid_filter" />
+    <node name="normal_and_roughness_estimator" pkg="normal_and_roughness_estimator" type="normal_and_roughness_estimator" />
+    <node name="traversability_evaluator" pkg="traversability_evaluator" type="traversability_evaluator"  output="screen"/>
+    <node name="polygon_generator" pkg="polygon_generator" type="polygon_generator"  output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find TerrainTraversabilityMapping)/rviz/normal_and_roughness.rviz"/>
+  </group>
+</launch>
